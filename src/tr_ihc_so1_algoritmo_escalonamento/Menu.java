@@ -37,11 +37,15 @@ public class Menu {
                 
                 break;
             case 3 :
+                algoritmo.SJFPreemptivo();
+                
                 break;
             case 4 :
+                algoritmo.RoundRobin();
+                
                 break;
             default: 
-                System.out.println("");
+                System.out.println("Opção Inválida!!");
                 break;
         }
     }
