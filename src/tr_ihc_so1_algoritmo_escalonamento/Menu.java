@@ -5,7 +5,10 @@
  */
 package tr_ihc_so1_algoritmo_escalonamento;
 
-import entidades.Algoritmo;
+import entidades.Fcfs;
+import entidades.RoundRobin;
+import entidades.Sjf;
+import entidades.SjfPreemptivo;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,7 +22,11 @@ public class Menu {
      */
     public static void main(String[] args) {
         
-        Algoritmo algoritmo = new Algoritmo();
+        Fcfs fcfs = new Fcfs();
+        Sjf sjf = new Sjf();
+        SjfPreemptivo sjfpreemptivo = new SjfPreemptivo();
+        RoundRobin rr = new RoundRobin();
+        
         
         int escolha = Integer.parseInt(JOptionPane.showInputDialog("Escolha o algoritmo: \n"
                 + "1 . FCFS\n"
@@ -29,19 +36,19 @@ public class Menu {
         
         switch (escolha){
             case 1 : 
-                algoritmo.Fcfs();
+                fcfs.Fcfs();
                 
                 break;
             case 2 :
-                algoritmo.Stf();
+                sjf.Stf();
                 
                 break;
             case 3 :
-                algoritmo.SJFPreemptivo();
+                sjfpreemptivo.SJFPreemptivo();
                 
                 break;
             case 4 :
-                algoritmo.RoundRobin();
+                rr.RoundRobin();
                 
                 break;
             default: 
